@@ -4,7 +4,7 @@ interface FooterProps {}
 
 const Footer: React.FC<FooterProps> = ({}) => {
   return (
-    <div className=" flex justify-between px-12 py-10 border-t  mt-20">
+    <div className=" flex justify-between px-12 py-10 border-t  ">
       <div></div>
       <div>
         <p className="text-left text-sm text-zinc-500/80 ">

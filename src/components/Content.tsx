@@ -86,9 +86,9 @@ const Content: React.FC<ContentProps> = ({}) => {
     setCopied(true);
   }
   return (
-    <div>
+    <div className="bg-[url('wave-haikei.svg')] bg-no-repeat bg-cover pb-20">
       <h1
-        className="mt-72 px-12 text-4xl text-zinc-800 font-semibold"
+        className="mt-64 pt-6 px-12 text-4xl text-zinc-800 font-semibold"
         id="projects"
       >
         Projects
@@ -113,7 +113,7 @@ const Content: React.FC<ContentProps> = ({}) => {
           {/* email div  */}
           <div
             onMouseLeave={() => setCopied(false)}
-            className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
+            className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40 bg-blue-50/10"
           >
             <h1 className="text-sm font-semibold text-zinc-800 flex items-center gap-2">
               {" "}
