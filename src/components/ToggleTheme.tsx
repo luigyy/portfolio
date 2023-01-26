@@ -15,10 +15,10 @@ const ToggleTheme: React.FC<ToggleThemeProps> = ({}) => {
   }, [theme]);
 
   return (
-    <div className=" backdrop-blur mt-6 absolute right-[80px]  shadow-md ring-1 ring-zinc-900/5 rounded-full">
+    <div className=" backdrop-blur mt-6 absolute right-[80px]  hover:shadow-lg  shadow-md ring-1 ring-zinc-900/5 rounded-full">
       <button
         // onClick={() => toggleTheme()}
-        className="items-center text-xl opacity-60 hover:text-emerald-600 px-3 py-2"
+        className="items-center text-xl opacity-60 text-emerald-600 px-3 py-2"
       >
         <FiSun className="" />
       </button>
