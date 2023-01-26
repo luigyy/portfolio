@@ -87,7 +87,10 @@ const Content: React.FC<ContentProps> = ({}) => {
   }
   return (
     <div>
-      <h1 className="mt-72 px-12 text-4xl text-zinc-800 font-semibold">
+      <h1
+        className="mt-72 px-12 text-4xl text-zinc-800 font-semibold"
+        id="projects"
+      >
         Projects
       </h1>
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2 mt-20 px-8 lg:px-12">
@@ -154,7 +157,7 @@ const Content: React.FC<ContentProps> = ({}) => {
               </span>
             </div>
             {/* education div  */}
-            <div className="">
+            <div className="" id="education">
               {/* ucr  */}
               <div className="mt-5 flex gap-4">
                 <div className=" p-1 overflow-hidden h-10 w-10 flex items-center justify-center rounded-full shadow-md shadow-zinc-500/5 ring-1 ring-zinc-900/5">
@@ -180,7 +183,10 @@ const Content: React.FC<ContentProps> = ({}) => {
               </div>
 
               {/* cv div  */}
-              <div className="w-[80%] mx-auto mt-10 bg-zinc-100 text-center py-2">
+              <div
+                className="w-[80%] mx-auto mt-10 bg-zinc-100 text-center py-2"
+                id="resume"
+              >
                 {" "}
                 <a
                   href="luigyValverde-CV.pdf"

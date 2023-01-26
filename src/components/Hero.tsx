@@ -9,7 +9,7 @@ interface HeroProps {}
 
 const Hero: React.FC<HeroProps> = ({}) => {
   return (
-    <div className="px-12 w-full relative">
+    <div className="px-12 w-full relative" id="about">
       <img
         src="./pic-profile.jpg"
         className="w-16 rounded-full md:mx-0 mx-auto "
