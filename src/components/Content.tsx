@@ -2,6 +2,7 @@ import React from "react";
 import { AiOutlineLink } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
 import { ImBooks } from "react-icons/im";
+import { TfiDownload } from "react-icons/tfi";
 
 //
 const EMAIL = "luigy.valverde@ucr.ac.cr";
@@ -86,12 +87,37 @@ const Content: React.FC<ContentProps> = ({}) => {
               Education
             </span>
           </div>
-          <div className="mt-5">
-            <h1 className="flex flex-col">
-              <span></span>
-              <span></span>
-            </h1>
-            <span></span>
+          {/* education div  */}
+          <div className="">
+            {/* ucr  */}
+            <div className="mt-5 flex gap-4">
+              <div className=" p-1 overflow-hidden h-10 w-10 flex items-center justify-center rounded-full shadow-md shadow-zinc-500/5 ring-1 ring-zinc-900/5">
+                <img
+                  src="ucr.png"
+                  className="bg-transparent rounded-full h-7 w-7"
+                  alt=""
+                />
+              </div>
+              <div className="flex flex-col">
+                <div>
+                  <p className="text-zinc-700 font-semibold text-sm">
+                    Universidad de Costa Rica
+                  </p>
+                </div>
+                <div className=" flex w-full mt-2 text-[12px]">
+                  <p className="text-zinc-600 pr-10">BS. Pure Mathematics</p>
+                  <p className="text-right text-zinc-500/70 ">2020 — Present</p>
+                </div>
+              </div>
+            </div>
+
+            {/* cv div  */}
+            <div className="w-[80%] mx-auto mt-10 bg-zinc-100 text-center py-2">
+              {" "}
+              <button className="text-zinc-700 flex gap-4 justify-center mx-auto items-center text-sm font-semibold ">
+                Download CV <TfiDownload className="text-lg text-zinc-700/50" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
