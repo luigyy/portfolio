@@ -7,18 +7,11 @@ import ProjectsSection from "./ProjectsSection";
 import InfoSection from "./InfoSection";
 
 //
-const EMAIL = "luigy.valverde@ucr.ac.cr";
 
 interface ContentProps {}
 
 const Content: React.FC<ContentProps> = ({}) => {
-  const [copied, setCopied] = useState(false);
-  //
-  function copyToClipboard() {
-    // Copy the text inside the text field
-    navigator.clipboard.writeText(EMAIL);
-    setCopied(true);
-  }
+
   return (
     <div className="bg-[url('wave-haikei.svg')] bg-no-repeat bg-cover pb-20">
       <h1

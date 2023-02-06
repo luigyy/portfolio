@@ -19,6 +19,13 @@ const PROJECTS = [
     url: "https://gymcontrol.netlify.app/",
   },
   {
+    date: "2023",
+    title: "Restaurant website template",
+    description:
+      "A template for a restaurant website. Inspired by a simplistic, eye-catching style",
+    url: "https://restaurant-templatee.netlify.app/",
+  },
+  {
     date: "2022",
     title: "Food service control",
     description: `I originally built this software for my family food service company, 
