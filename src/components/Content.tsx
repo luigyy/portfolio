@@ -5,13 +5,13 @@ import { ImBooks } from "react-icons/im";
 import { TfiDownload } from "react-icons/tfi";
 import ProjectsSection from "./ProjectsSection";
 import InfoSection from "./InfoSection";
+import Skills from "./Skills";
 
 //
 
 interface ContentProps {}
 
 const Content: React.FC<ContentProps> = ({}) => {
-
   return (
     <div className="bg-[url('wave-haikei.svg')] bg-no-repeat bg-cover pb-20">
       <h1
@@ -29,6 +29,7 @@ const Content: React.FC<ContentProps> = ({}) => {
         <InfoSection />
         {/* right div  */}
       </div>
+      <Skills />
     </div>
   );
 };
