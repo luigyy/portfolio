@@ -20,10 +20,10 @@ const Hero: React.FC<HeroProps> = ({}) => {
           Coding enthusiast, developer and always a student!
         </h1>
         <p className="text-zinc-600 mt-10 md:text-left text-center">
-          Hi I am Luigy, a developer based in San José, Costa Rica. I've been
-          playing with code for as long as I can remember. Lately, I've been
-          interested in web development, where I have both worked as freelancer
-          and built plenty of projects.
+          Hi I am Luigy, a developer based in San José, Costa Rica. I've always
+          enojoyed learning and playing with code. Lately, I've been interested
+          in web development, where I have done freelance work and built plenty
+          of projects.
         </p>
       </div>
       <span className="mt-10 flex md:justify-start justify-center gap-7">

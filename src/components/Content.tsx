@@ -18,7 +18,7 @@ const Content: React.FC<ContentProps> = ({}) => {
         className="mt-64 pt-6 px-12 text-4xl text-zinc-800 font-semibold"
         id="projects"
       >
-        Projects
+        Experience
       </h1>
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2 mt-20 px-8 lg:px-12">
         {/* left div  */}

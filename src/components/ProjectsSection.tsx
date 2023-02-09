@@ -80,17 +80,27 @@ interface ProjectsSectionProps {}
 
 const ProjectsSection: React.FC<ProjectsSectionProps> = ({}) => {
   return (
-    <div className="flex flex-col gap-16 ">
-      {PROJECTS.map((item, index) => {
-        return (
-          <ProjectCard
-            date={item.date}
-            title={item.title}
-            description={item.description}
-            url={item.url}
-          />
-        );
-      })}
+    <div>
+      <div className="flex flex-col gap-16 ">
+        {PROJECTS.map((item, index) => {
+          return (
+            <ProjectCard
+              date={item.date}
+              title={item.title}
+              description={item.description}
+              url={item.url}
+            />
+          );
+        })}
+      </div>
+      <div className="mt-20">
+        <span className=" text-zinc-500 border-b-2 pb-1 hover:text-zinc-700 transition-colors duration-500 text-sm">
+          <a href="https://github.com/luigyy" target="_blank">
+            {" "}
+            More...
+          </a>
+        </span>
+      </div>
     </div>
   );
 };
