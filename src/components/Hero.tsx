@@ -9,7 +9,7 @@ interface HeroProps {}
 
 const Hero: React.FC<HeroProps> = ({}) => {
   return (
-    <div className="px-12 w-full relative" id="about">
+    <div className="px-12 w-full relative " id="about">
       <img
         src="./pic-profile.jpg"
         className="w-16 rounded-full md:mx-0 mx-auto "
@@ -51,11 +51,11 @@ const Hero: React.FC<HeroProps> = ({}) => {
       </span>
 
       {/* blob  */}
-      <div>
+      {/* <div>
         <div className="w-60 h-60 bg-blue-500 absolute md:right-28 right-[100px] top-14 rounded-full mix-blend-multiply filter blur-3xl opacity-10 md:opacity-20 animate-blob animation-delay-2000"></div>
         <div className="w-60 h-60 bg-red-500 absolute md:right-10 right-[100px] top-14 rounded-full mix-blend-multiply filter blur-3xl opacity-10 md:opacity-20 animate-blob animation-delay-1000"></div>
         <div className="w-60 h-60 bg-yellow-500 absolute md:right-4 right-[100px] top-20 rounded-full mix-blend-multiply filter blur-3xl opacity-10 md:opacity-20 animate-blob animation-delay-4000"></div>
-      </div>
+      </div> */}
     </div>
   );
 };

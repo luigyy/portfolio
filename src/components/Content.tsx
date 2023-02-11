@@ -13,9 +13,9 @@ interface ContentProps {}
 
 const Content: React.FC<ContentProps> = ({}) => {
   return (
-    <div className="bg-[url('wave-haikei.svg')] bg-no-repeat bg-cover pb-20">
+    <div className=" bg-no-repeat bg-cover pb-20">
       <h1
-        className="mt-64 pt-6 px-12 text-4xl text-zinc-800 font-semibold"
+        className="mt-44 pt-6 px-12 text-4xl text-zinc-800 font-semibold"
         id="projects"
       >
         Experience
