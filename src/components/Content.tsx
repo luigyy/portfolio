@@ -15,7 +15,7 @@ const Content: React.FC<ContentProps> = ({}) => {
   return (
     <div className=" bg-no-repeat bg-cover pb-20">
       <h1
-        className="mt-44 pt-6 px-12 text-4xl text-zinc-800 font-semibold"
+        className="mt-16 pt-6 px-12 text-4xl text-zinc-800 font-semibold"
         id="projects"
       >
         Experience
