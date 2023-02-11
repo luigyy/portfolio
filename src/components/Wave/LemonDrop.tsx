@@ -123,7 +123,7 @@ function LemonDrop() {
       <svg
         width="100%"
         height="100px"
-        viewBox="0 0 200 100"
+        viewBox="0 0 90 100"
         preserveAspectRatio="none"
         className="-mt-5  "
       >
