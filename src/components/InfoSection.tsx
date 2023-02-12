@@ -71,6 +71,7 @@ const InfoSection: React.FC<InfoSectionProps> = ({}) => {
             <div className="mt-5 flex gap-4">
               <div className="p-1 overflow-hidden h-10 w-10 flex items-center justify-center rounded-full shadow-md shadow-zinc-500/5 ring-1 ring-zinc-900/5">
                 <img
+                  loading="lazy"
                   src="ucr.png"
                   className="bg-transparent rounded-full h-7 w-7"
                   alt=""

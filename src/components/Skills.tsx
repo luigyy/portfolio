@@ -45,6 +45,7 @@ const Skills: React.FC<SkillsProps> = ({}) => {
             <div className="p-1 overflow-hidden h-10 w-10 flex mx-auto items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 ">
               <img
                 src={`/logos/${item}`}
+                loading="lazy"
                 className="bg-transparent rounded-full h-7 w-7"
                 alt=""
               />
@@ -89,6 +90,7 @@ const Skills: React.FC<SkillsProps> = ({}) => {
             <div className="p-1 overflow-hidden h-10 w-10 flex mx-auto items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 ">
               <img
                 src={`/logos/${item}`}
+                loading="lazy"
                 className="bg-transparent rounded-full h-7 w-7"
                 alt=""
               />
