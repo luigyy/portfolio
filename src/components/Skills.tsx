@@ -5,7 +5,9 @@ interface SkillsProps {}
 const Skills: React.FC<SkillsProps> = ({}) => {
   return (
     <div className="px-12 mt-44 pb-18">
-      <h1 className="text-4xl mb-20 text-zinc-800 font-semibold">Skills</h1>
+      <h1 className="text-4xl mb-20 text-zinc-800 font-semibold" id="skills">
+        Skills
+      </h1>
 
       {/* frontend  */}
       <div className=" min-h-72 gap-y-10 md:flex grid grid-cols-1 ">

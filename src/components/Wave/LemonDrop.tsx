@@ -89,7 +89,6 @@ function LemonDrop() {
       }
     };
   }, []);
-
   return (
     <div className="pt-14  w-full">
       {/* <svg
