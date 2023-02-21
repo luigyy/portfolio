@@ -11,28 +11,26 @@ const PROJECTS = [
     url: "https://calcubecasucr.netlify.app/",
   },
   {
+    date: "2023",
+    title: "Restaurant site ",
+    description:
+      "A template for a restaurant website. Inspired by a simplistic, eye-catching style",
+    url: "https://restaurant-templatee.netlify.app/",
+  },
+  {
+    date: "2023",
+    title: "Photographer portfolio site ",
+    description:
+      "This is a portofolio website template that I built as a freelance project",
+    url: "https://photographfolio.netlify.app/",
+  },
+  {
     date: "2022",
     title: "Gym management software",
     description: `This is is a gym control software with all CRUD operations (Create, Read, Update and Delete), 
   fully equipped with a backend, in which you can manage your users, update memberships and control who's accessing your GYM by providing a QR generator and a QR scanner. 
   It even contains an SMTP server to automatically send the QR codes via email!`,
     url: "https://gymcontrol.netlify.app/",
-  },
-  {
-    date: "2023",
-    title: "Restaurant website template",
-    description:
-      "A template for a restaurant website. Inspired by a simplistic, eye-catching style",
-    url: "https://restaurant-templatee.netlify.app/",
-  },
-  {
-    date: "2022",
-    title: "Food service control",
-    description: `I originally built this software for my family food service company, 
-  in big events sometimes you can only serve so many meals to each person , what if you send everyone a QR code, and let them scan it before they have a meal?
-  this software does exactly that, you can customize the max number of meals per each person, and if they exceed it, the code won't scan! I'ts been truly game changer! 
-  `,
-    url: "https://food-schedulerr.netlify.app/",
   },
   {
     date: "2022",
