@@ -35,7 +35,7 @@ const PROJECTS = [
   {
     date: "2022",
     title: "Porfolio website",
-    description: `This portfolio website you are watching. It's simplistic style, I consider it to be easy to browse and read. It contains dark mode functionality and it is fully responsive `,
+    description: `This portfolio website you are watching. It's simplistic style, I consider it to be easy to browse and read. Also, it's fully responsive`,
     url: "",
   },
 ];
