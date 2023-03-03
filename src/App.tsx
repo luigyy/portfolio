@@ -22,7 +22,7 @@ function App() {
   });
 
   const moveCursor = {
-    transform: `translate(${pos.x}px, ${pos.y}px)`,
+    transform: `translate(${pos.x - 112}px, ${pos.y - 112 + scrollY}px)`,
   };
   return (
     // container
@@ -30,7 +30,7 @@ function App() {
       <div
         style={moveCursor}
         id="blob"
-        className="w-56 h-56 bg-black absolute duration-[1s] ease-out"
+        className="w-56 h-56 bg-black absolute duration-[3s] ease-out "
       ></div>
       {/* main card  */}
       <div className="md:mx-16 bg-white min-h-screen shadow-sm ">
