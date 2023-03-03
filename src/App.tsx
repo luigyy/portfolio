@@ -8,36 +8,36 @@ import { useState, useEffect } from "react";
 import "./App.css";
 //
 function App() {
-  const [pos, setPos] = useState({ x: 0, y: 0 });
-  useEffect(() => {
-    const updatePos = (e: MouseEvent) => {
-      const { clientY, clientX } = e;
-      setPos({ x: clientX, y: clientY });
-    };
-    window.addEventListener("mousemove", updatePos);
+  // const [pos, setPos] = useState({ x: 0, y: 0 });
+  // useEffect(() => {
+  //   const updatePos = (e: MouseEvent) => {
+  //     const { clientY, clientX } = e;
+  //     setPos({ x: clientX, y: clientY });
+  //   };
+  //   window.addEventListener("mousemove", updatePos);
 
-    return () => {
-      window.removeEventListener("mousemove", updatePos);
-    };
-  });
+  //   return () => {
+  //     window.removeEventListener("mousemove", updatePos);
+  //   };
+  // });
 
-  const moveCursor = {
-    transform: `translate(${pos.x - 112}px, ${pos.y - 112 + scrollY}px)`,
-  };
+  // const moveCursor = {
+  //   transform: `translate(${pos.x - 112}px, ${pos.y - 112 + scrollY}px)`,
+  // };
   return (
     // container
     <div className="relative overflow-hidden w-full h-full">
-      <div className="bg-gray-50 min-h-screen overflow-hidden ">
-        <div
+      <div className="bg-gray-50 min-h-screen ">
+        {/* <div
           style={moveCursor}
           id="blob"
-          className=" w-60 h-60   text-white rounded-full   absolute duration-[3s] ease-out "
+          className=" hidden  w-60 h-60   text-white rounded-full   absolute duration-[3s] ease-out "
         >
           <div
             id="in-blob"
             className="blur-[170px] bg-emerald-200 bg-blend-darken w-full rounded-full h-full"
           ></div>
-        </div>
+        </div> */}
         {/* main card  */}
         <div className=" md:mx-16 bg-white min-h-screen shadow-sm  ">
           {/* navbar  */}
