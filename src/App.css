@@ -1,5 +1,30 @@
+* {
+  z-index: 2;
+}
+
+p,
+h1,
+span,
+p {
+  z-index: 0;
+}
+
 #blob {
-  /* transition-duration: 1000ms;
-  transition-timing-function: ease-out;
-  border: 10px red solid; */
+  z-index: 1;
+}
+
+#in-blob {
+  /* background: linear-gradient(to right, aqua, purple); */
+  animation: rotateBlob 15s infinite ease-out;
+}
+@keyframes rotateBlob {
+  from {
+    transform: rotate(0deg) scale(1, 1.5);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.5, 1);
+  }
+  to {
+    transform: rotate(360deg) scale(1, 1.5);
+  }
 }

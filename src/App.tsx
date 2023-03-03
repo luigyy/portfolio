@@ -26,25 +26,32 @@ function App() {
   };
   return (
     // container
-    <div className="bg-gray-50 min-h-screen overflow-hidden   ">
-      <div
-        style={moveCursor}
-        id="blob"
-        className="w-56 h-56 bg-black absolute duration-[3s] ease-out "
-      ></div>
-      {/* main card  */}
-      <div className="md:mx-16 bg-white min-h-screen shadow-sm ">
-        {/* navbar  */}
-        <div className="relative bg-emerald-200 items-center  flex justify-center ">
-          <Navbar />
-          {/* <ToggleTheme /> */}
+    <div className="relative overflow-hidden w-full h-full">
+      <div className="bg-gray-50 min-h-screen overflow-hidden ">
+        <div
+          style={moveCursor}
+          id="blob"
+          className=" w-60 h-60   text-white rounded-full   absolute duration-[3s] ease-out "
+        >
+          <div
+            id="in-blob"
+            className="blur-[170px] bg-emerald-200 bg-blend-darken w-full rounded-full h-full"
+          ></div>
         </div>
-        <div className="pt-14 bg-emerald-200  ">
-          <Hero />
-          <LemonDrop />
+        {/* main card  */}
+        <div className=" md:mx-16 bg-white min-h-screen shadow-sm  ">
+          {/* navbar  */}
+          <div className="relative bg-emerald-200 items-center  flex justify-center ">
+            <Navbar />
+            {/* <ToggleTheme /> */}
+          </div>
+          <div className="pt-14 bg-emerald-200  ">
+            <Hero />
+            <LemonDrop />
+          </div>
+          <Content />
+          <Footer />
         </div>
-        <Content />
-        <Footer />
       </div>
     </div>
   );
