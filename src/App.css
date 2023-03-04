@@ -17,14 +17,27 @@ p {
   /* background: linear-gradient(to right, aqua, purple); */
   animation: rotateBlob 15s infinite ease-out;
 }
-@keyframes rotateBlob {
+
+.border-animation {
+}
+
+.border-animation::before {
+  content: "";
+  background-image: conic-gradient(rgb(167 250 208) 40deg, transparent 120deg);
+  width: 150%;
+  aspect-ratio: 1;
+  position: absolute;
+  top: -70px;
+  left: -35px;
+  z-index: 1;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
   from {
-    transform: rotate(0deg) scale(1, 1.5);
-  }
-  50% {
-    transform: rotate(180deg) scale(1.5, 1);
+    transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg) scale(1, 1.5);
+    transform: rotate(360deg);
   }
 }
