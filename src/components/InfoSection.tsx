@@ -97,7 +97,7 @@ const InfoSection: React.FC<InfoSectionProps> = ({}) => {
             >
               {" "}
               <a
-                href="luigyValverde-CV.pdf"
+                href="Luigy-Resume.pdf"
                 download="luigy-CV.pdf"
                 className="text-zinc-700 flex gap-4 justify-center mx-auto items-center text-sm font-semibold "
               >
