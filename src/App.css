@@ -9,21 +9,9 @@ p {
   z-index: 0;
 }
 
-#blob {
-  z-index: 1;
-}
-
-#in-blob {
-  /* background: linear-gradient(to right, aqua, purple); */
-  animation: rotateBlob 15s infinite ease-out;
-}
-
-.border-animation {
-}
-
 .border-animation::before {
   content: "";
-  background-image: conic-gradient(rgb(167 250 208) 40deg, transparent 120deg);
+  background-image: conic-gradient(rgb(100 250 208) 40deg, transparent 120deg);
   width: 150%;
   aspect-ratio: 1;
   position: absolute;

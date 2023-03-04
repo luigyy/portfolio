@@ -12,6 +12,7 @@ function App() {
   const [pos, setPos] = useState({ x: 0, y: 0 });
   const [currentPic, setCurrentPic] = useState("");
   const { isHoveringProject, setIsHoveringProject } = useCursorContext();
+
   useEffect(() => {
     const updatePos = (e: MouseEvent) => {
       const { clientY, clientX } = e;
@@ -27,6 +28,7 @@ function App() {
   const moveCursor = {
     transform: `translate(${pos.x + 150}px, ${pos.y - 130 + scrollY}px)`,
   };
+
   useEffect(() => {
     if (typeof isHoveringProject === "string" && isHoveringProject != "") {
       setCurrentPic(isHoveringProject);
@@ -38,12 +40,12 @@ function App() {
       <div className="bg-gray-50 min-h-screen ">
         {/* img cursor */}
         <div
-          className={`w-36 aspect-video  border-animation absolute transition-opacity rounded-sm  shadow-2xl overflow-hidden duration-300   ${
-            isHoveringProject ? "opacity-100 " : "opacity-0"
+          className={`z-50 w-36 aspect-video  border-animation absolute transition-all ease-out rounded-sm  shadow-2xl overflow-hidden duration-500   ${
+            isHoveringProject ? "  " : "w-0  "
           }`}
           style={moveCursor}
         >
-          <div className="flex w-[133px] h-full  mx-auto  justify-center items-center">
+          <div className="flex w-[134px] h-full  mx-auto  justify-center items-center">
             <img src={currentPic} className="w-full object-cover" alt="" />
           </div>
         </div>

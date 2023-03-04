@@ -5,6 +5,13 @@ import { useCursorContext } from "../contexts/CursorContext";
 //
 const PROJECTS = [
   {
+    date: "2023",
+    title: "Music artist website",
+    description: `A website for a music artist, using react + tailwind and some vanillajs `,
+    url: " https://music-artist-site.netlify.app/",
+    imgName: "music-artist.png",
+  },
+  {
     date: "2022",
     title: "calcuBecasUCR",
     description: `This is a website used by hundreds of students everyday. It's purpose is 
