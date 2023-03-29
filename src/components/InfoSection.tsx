@@ -85,7 +85,6 @@ const InfoSection: React.FC<InfoSectionProps> = ({}) => {
                 </div>
                 <div className=" flex w-full mt-2 text-[12px]">
                   <p className="text-zinc-600 pr-10">BS. Pure Mathematics</p>
-                  <p className="text-right text-zinc-500/70 ">2020 — Present</p>
                 </div>
               </div>
             </div>
