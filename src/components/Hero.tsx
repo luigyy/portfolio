@@ -4,6 +4,7 @@ import {
   AiFillGithub,
   AiFillLinkedin,
 } from "react-icons/ai";
+import { MdEmail } from "react-icons/md";
 
 interface HeroProps {}
 
@@ -17,23 +18,16 @@ const Hero: React.FC<HeroProps> = ({}) => {
       />
       <div className="max-w-2xl mt-10">
         <h1 className="text-5xl md:text-left text-center text-zinc-800 font-bold tracking-tight">
-          Coding enthusiast, developer and always a student!
+          Coding enthusiast, developer and tech obsessed!
         </h1>
         <p className="text-zinc-600 mt-10 md:text-left text-center">
-          Hi I am Luigy, a developer based in San José, Costa Rica. I've always
-          enojoyed learning and playing with code. Lately, I've been interested
-          in web development, where I have done freelance work and built plenty
-          of projects.
+          I am a software developer, interested in making the web look good and
+          function properly. I’m very dedicated and love working in hard
+          problems as well as motivating the others by showcasing my own
+          passion.
         </p>
       </div>
-      <span className="mt-10 flex md:justify-start justify-center gap-7">
-        <a
-          target="_blank"
-          href="https://www.instagram.com/luigyyyyyy/"
-          className="text-zinc-600 text-3xl "
-        >
-          <AiOutlineInstagram />
-        </a>
+      <div className="mt-10 flex md:justify-start justify-center gap-7">
         <a
           target="_blank"
           href="https://github.com/luigyy"
@@ -48,7 +42,14 @@ const Hero: React.FC<HeroProps> = ({}) => {
         >
           <AiFillLinkedin />
         </a>
-      </span>
+      </div>
+
+      <div className="flex gap-x-1 items-center md:justify-start justify-center pl-1 pt-2">
+        <MdEmail className="text-zinc-600 text-xl hidden md:flex" />
+        <h1 className="text-zinc-600 text-sm md:text-left text-center italic ">
+          valverdejareth@gmail.com
+        </h1>
+      </div>
 
       {/* blob  */}
       {/* <div>

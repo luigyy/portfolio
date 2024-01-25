@@ -22,10 +22,7 @@ const Skills: React.FC<SkillsProps> = ({}) => {
               {" "}
               Typescript + React + Tailwindcss
             </span>
-            , I really love these two technologies because they provide an
-            amazing developer experience and once you get comofortable, You can
-            get really fast. I have also built projects with technologies such
-            as{" "}
+            , I have also worked in projects with technologies such as{" "}
             <span className="font-semibold">
               {" "}
               Vuejs, Bootstrap and React Native

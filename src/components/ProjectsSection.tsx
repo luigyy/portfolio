@@ -1,56 +1,59 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineLink } from "react-icons/ai";
 import "../App.css";
 import { useCursorContext } from "../contexts/CursorContext";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+
 //
 const PROJECTS = [
+  {
+    date: "2024",
+    title: "Carei - Clothing store",
+    description: `A clothing store, written in Nextjs integrated with Tilopay to process payments. Contains admin dashboard with CRUD functions for garments.`,
+    url: "https://carei.vercel.app/",
+    imgNames: [
+      "carei/carei-img-1.png",
+      "carei/carei-img-2.png",
+      "carei/carei-img-3.png",
+    ],
+  },
+  {
+    date: "2023",
+    title: "Movi - Car selling platform",
+    description: `A platform to connect car sellers ans buyers, 
+    in a secure way. It is free, but also contains paid tiers to maximize your reach, as well as luxury car selling services`,
+    url: "https://www.moviautos.com/",
+    imgNames: [
+      "movi/movi-img-1.png",
+      "movi/movi-img-2.png",
+      "movi/movi-img-3.png",
+    ],
+  },
+
   {
     date: "2023",
     title: "Music artist website",
     description: `A website for a music artist, using react + tailwind and some vanillajs `,
     url: " https://music-artist-site.netlify.app/",
-    imgName: "music-artist.png",
+    imgNames: [
+      "music/music-img-1.png",
+      "music/music-img-2.png",
+      "music/music-img-3.png",
+    ],
   },
-  {
-    date: "2022",
-    title: "calcuBecasUCR",
-    description: `This is a website used by hundreds of students everyday. It's purpose is 
-       to track the amount of money given to students by the Universidad de Costa Rica on
-        scholarships everymonth, so students can check and organize themselves. `,
-    url: "https://calcubecasucr.netlify.app/",
-    imgName: "calcubecas.png",
-  },
+
   {
     date: "2023",
     title: "Restaurant site ",
     description:
       "A template for a restaurant website. Inspired by a simplistic, eye-catching style",
     url: "https://restaurant-templatee.netlify.app/",
-    imgName: "restaurant.png",
-  },
-  {
-    date: "2023",
-    title: "Photographer portfolio site ",
-    description:
-      "This is a portofolio website template that I built as a freelance project",
-    url: "https://photographfolio.netlify.app/",
-    imgName: "photographer.png",
-  },
-  {
-    date: "2022",
-    title: "Gym management software",
-    description: `This is is a gym control software with all CRUD operations (Create, Read, Update and Delete), 
-  fully equipped with a backend, in which you can manage your users, update memberships and control who's accessing your GYM by providing a QR generator and a QR scanner. 
-  It even contains an SMTP server to automatically send the QR codes via email!`,
-    url: "https://gymcontrol.netlify.app/",
-    imgName: "gym.png",
-  },
-  {
-    date: "2022",
-    title: "Porfolio website",
-    description: `This portfolio website you are watching. It's simplistic style, I consider it to be easy to browse and read. Also, it's fully responsive`,
-    url: "",
-    imgName: "portfolio.png",
+    imgNames: [
+      "rest/rest-img-1.png",
+      "rest/rest-img-2.png",
+      "rest/rest-img-3.png",
+    ],
   },
 ];
 //
@@ -60,28 +63,37 @@ interface ProjectCard {
   title: string;
   description: string;
   url: string;
-  imgName: string;
+  imgNames: string[];
+  setToggler: (toggle: boolean) => void;
+  setSlides: (slides: { src: string }[]) => void;
 }
 
 const ProjectCard: React.FC<ProjectCard> = ({
   date,
   title,
-  imgName,
+  imgNames,
   description,
   url,
+  setToggler,
+  setSlides,
 }) => {
   const { isHoveringProject, setIsHoveringProject } = useCursorContext();
+  const handleImgClick = () => {
+    // setSlides(imgNames);
+    function populateSlides() {
+      let slides: { src: string }[] = [];
+      imgNames.map((img) => slides.push({ src: img }));
+      return slides;
+    }
+    setSlides(populateSlides());
+
+    setToggler(true);
+  };
+
+  //
   return (
-    <div
-      onMouseEnter={() => {
-        setIsHoveringProject(imgName);
-      }}
-      onMouseLeave={() => {
-        setIsHoveringProject(false);
-      }}
-      className=""
-    >
-      <div className="z-10">
+    <div className="-2">
+      <div className="z-10 ">
         <span className="border-l-2 border-zinc-300 pl-3 text-zinc-400 text-sm">
           {date}
         </span>
@@ -89,6 +101,18 @@ const ProjectCard: React.FC<ProjectCard> = ({
           {title}
         </h1>
         <p className="mt-2 text-sm text-zinc-600 ">{description}</p>
+
+        <div className=" py-4  flex gap-x-3">
+          {imgNames.map((img) => (
+            <button className="rounded-md" onClick={handleImgClick}>
+              <img
+                src={img}
+                className="w-72 border border-emerald-600/30 rounded-md"
+                alt=""
+              />
+            </button>
+          ))}
+        </div>
 
         <a
           href={url}
@@ -101,33 +125,46 @@ const ProjectCard: React.FC<ProjectCard> = ({
     </div>
   );
 };
-interface ProjectsSectionProps {}
 
-const ProjectsSection: React.FC<ProjectsSectionProps> = ({}) => {
+const ProjectsSection = ({}) => {
+  const [toggler, setToggler] = useState(false);
+  const [slides, setSlides] = useState([{ src: "/ucr.png" }]);
+  useEffect(() => console.log(slides), [slides]);
+
   return (
-    <div>
-      <div className="flex flex-col gap-16 ">
-        {PROJECTS.map((item, index) => {
-          return (
-            <ProjectCard
-              date={item.date}
-              title={item.title}
-              description={item.description}
-              url={item.url}
-              imgName={item.imgName}
-            />
-          );
-        })}
+    <>
+      <div>
+        <div className="flex flex-col gap-16 ">
+          {PROJECTS.map((item, index) => {
+            return (
+              <ProjectCard
+                setToggler={setToggler}
+                key={index}
+                date={item.date}
+                title={item.title}
+                description={item.description}
+                url={item.url}
+                setSlides={setSlides}
+                imgNames={item.imgNames}
+              />
+            );
+          })}
+        </div>
+        <div className="mt-20">
+          <span className=" text-zinc-500 border-b-2 pb-1 hover:text-zinc-700 transition-colors duration-500 text-sm">
+            <a href="https://github.com/luigyy" target="_blank">
+              More...
+            </a>
+          </span>
+        </div>
       </div>
-      <div className="mt-20">
-        <span className=" text-zinc-500 border-b-2 pb-1 hover:text-zinc-700 transition-colors duration-500 text-sm">
-          <a href="https://github.com/luigyy" target="_blank">
-            {" "}
-            More...
-          </a>
-        </span>
-      </div>
-    </div>
+
+      <Lightbox
+        open={toggler}
+        close={() => setToggler(false)}
+        slides={slides}
+      />
+    </>
   );
 };
 
